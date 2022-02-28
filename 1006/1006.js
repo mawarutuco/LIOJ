@@ -33,10 +33,6 @@ function solve(lines) {
             if (suWaTeTaSeKi == line2[j]) { line2[j] = 'X' }
         }
     }
-    
-    console.log(line1)
-    console.log(line2)
-
 
     //比對兩排
     let soBaNi = 0
