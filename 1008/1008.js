@@ -17,7 +17,8 @@ rl.on('close', function () {
 
 function solve(lines) {
     let water = Number(lines)
-    let bucket,tmp = 0
+    let bucket = 0
+    let tmp = 0
     do {
         for (let i = 1; Math.pow(2, i) <= water; i++) {
             tmp = Math.pow(2, i)
