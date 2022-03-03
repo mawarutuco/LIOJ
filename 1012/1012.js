@@ -22,9 +22,9 @@ function solve(lines) {
     if (A > B) {
         console.log(A * 2)         //最大飲料價值
         console.log(A * 2 - (A + B))   //損失值
-    }else{
-        console.log(B*2)
-        console.log(B*2-(A+B))
+    } else {
+        console.log(B * 2)
+        console.log(B * 2 - (A + B))
     }
 
 }
