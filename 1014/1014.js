@@ -24,4 +24,4 @@ function solve(lines) {
     }
     console.log(th)
 }
-
+//90~98也需要替除掉
