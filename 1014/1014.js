@@ -20,10 +20,7 @@ function solve(lines) {
     let n = Number(lines[0])
     let th = 0 //第幾個數
     for (let i = 1; i <= n; i++) {
-        if (i % 10 != 9) { th++ }
-        // console.log('i%10=' + i % 10)
-        // console.log('i:' + i)
-        // console.log('th:' + th)
+        if (i % 10 != 9 ) { th++ }
     }
     console.log(th)
 }
