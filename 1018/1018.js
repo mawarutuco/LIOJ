@@ -17,12 +17,12 @@ rl.on('close', function () {
     solve(lines)
 })
 
+//1018
 function solve(lines) {
     let arr = [], tmp = 1, biggest = 0
-    let last = Number(lines[0]) - 1
     arr = lines[1].split(' ')
 
-    for (let i = 0; i < last; i++) {
+    for (let i = 0; i < Number(lines[0]) - 1; i++) {
         if (arr[i] == arr[i + 1]) { tmp++ }
         else { tmp = 1 }
         // console.log(arr[i])
@@ -31,6 +31,6 @@ function solve(lines) {
         // console.log('big:' + biggest + ',tmp:' + tmp)
         // console.log('===')
     }
-    if (last == 0) { console.log(1) }
+    if (Number(lines[0]) == 1) { console.log(1) }
     else { console.log(biggest) }
 }
