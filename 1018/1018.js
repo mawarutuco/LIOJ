@@ -1,8 +1,6 @@
 //type input.txt | node 1018.js
 
-// const { copyFileSync } = require('fs');
 var readline = require('readline');
-const { arrayBuffer } = require('stream/consumers');
 
 var lines = []
 var rl = readline.createInterface({

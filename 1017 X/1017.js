@@ -1,8 +1,6 @@
 //type input.txt | node 1017.js
 
-// const { copyFileSync } = require('fs');
 var readline = require('readline');
-const { arrayBuffer } = require('stream/consumers');
 
 var lines = []
 var rl = readline.createInterface({
@@ -26,8 +24,8 @@ function solve(lines) {
         arr.push(Number(lines[i]))
     }
 
-    if (Number(lines[0]) > Number[1]) { last = Number(lines[0]) - 1 }
-    else { last = Number(lines[1]) }
+    if (Number(lines[0]) > Number[1]) { last = Number(lines[1]) }
+    else { last = Number(lines[0])  }
 
     //判斷偷到物品之總計價值
     for (let i = 0; i < last; i++) {
