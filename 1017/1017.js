@@ -18,46 +18,27 @@ rl.on('close', function () {
 })
 
 function solve(lines) {
-    //---計算時間開始---
-    // let start=0,end=0
-    // start = new Date().getTime();
 
-    let arr = [], value = 0, biggest = 0, index = 0
-    //lines轉為數字
-    for (let i = 0; i < lines.length; i++) {
-        lines[i] = Number(lines[i])
+    let last = Number(lines[1]) + 1
+    let arr = [], value = 0, biggest = 0
+
+    for (let i = 2; i <= last; i++) {
+        arr.push(Number(lines[i]))
     }
+    // console.log(arr)
 
-    //獨立出物品
-    for (let i = 2; i <= lines[1] + 1; i++) {
-        arr.push(lines[i])
-    }
-    console.log(arr)
-
+    //判斷偷到物品之總計價值
     for (let i = 0; i < lines[0]; i++) {
-        biggest = Math.max(...arr)
+        if (Math.max(...arr) < 0) { biggest = 0 }
+        else { biggest = Math.max(...arr) }
         value += biggest
-        index = arr.indexOf(biggest)
-        arr.splice(index,1)
-        // console.log('big:' + biggest + ',x:' + index + ',arr:' + arr)
-        // console.log('---')
+
+        arr.splice(arr.indexOf(biggest), 1)
+        //splice(start[,deleteCount])
+
+        // console.log('big:' + biggest + ',arr:' + arr)
+        // console.log('----')
     }
     console.log(value)
 
-    // for (let i = 0; i < lines[0]; i++) {
-    //     biggest = Math.max(...arr)
-    //     value += biggest
-    //     // console.log('big:'+biggest+'this:'+arr.indexOf(biggest))
-    //     arr.splice(arr.indexOf(biggest))
-
-    //     console.log(arr)
-    //     console.log('---')
-    // }
-    // console.log(value)
-
-
-    //---計算時間結束---
-    // end = new Date().getTime();
-    // console.log((end-start)+'ms')
-    //兩種方式時間差不多
 }
