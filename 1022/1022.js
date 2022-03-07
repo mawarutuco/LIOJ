@@ -13,6 +13,15 @@ rl.on('line', function (line) {
 });
 
 rl.on('close', function () {
+    solve(lines)
+})
+
+
+function solve(lines) {
+    //法1 星星第一行以外都加2**
+    let n = Number(lines[0]), start = '*'
+
+    for (let a = 1; a <= n; a++) { //列印行數
 
         if (a != 1) { start += '**' } //第一行外都加兩顆星星
 
