@@ -1,6 +1,6 @@
 //type input.txt | node 1022.js
 
-const { join } = require('path');
+
 var readline = require('readline');
 
 var lines = []

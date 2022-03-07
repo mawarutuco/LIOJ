@@ -1,7 +1,6 @@
 //type input.txt | node 1023.js
 
-const { strictEqual } = require('assert');
-const { join } = require('path');
+
 var readline = require('readline');
 
 var lines = []
