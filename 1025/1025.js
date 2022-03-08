@@ -31,10 +31,11 @@ function solve(lines) {
         let a = 0
         for (let j = 0; j < tmp.length; j++) {
             // console.log(Number(tmp[j]))
-            tmp2 = Number(tmp[j])
-            console.log(tmp2) //NaN?
-            console.log(tmp.length) //ok
-            a += tmp2 ** tmp.length
+            // tmp2 = Number(tmp[j])
+            // console.log(tmp2) //NaN
+            // console.log(tmp.length) //ok
+            tmp[j] = Number(tmp[j])  //NaN
+            a += tmp[j] ** tmp.length
             console.log(a)
         }
 
