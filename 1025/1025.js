@@ -20,20 +20,24 @@ function solve(lines) {
     let arr = lines[0].split(' ')
     let n = Number(arr[0])
     let m = Number(arr[1])
-    let tmp = []
+    let tmp = [], tmp2 = 0
 
     for (let i = n; i <= m; i++) {
         i = String(i)
         tmp.push(i.split(''))
-        console.log(tmp)
+        // console.log(tmp)
+
 
         let a = 0
         for (let j = 0; j < tmp.length; j++) {
-            
-            a += Number(tmp[j]) ** tmp.length
+            // console.log(Number(tmp[j]))
+            tmp2 = Number(tmp[j])
+            console.log(tmp2) //NaN?
+            console.log(tmp.length) //ok
+            a += tmp2 ** tmp.length
             console.log(a)
         }
-        
+
         // console.log(tmp)
     }
 
