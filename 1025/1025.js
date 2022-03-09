@@ -17,30 +17,24 @@ rl.on('close', function () {
 
 
 function solve(lines) {
-    let arr = lines[0].split(' ')
-    let n = Number(arr[0])
-    let m = Number(arr[1])
-    let tmp = [], tmp2 = 0
 
-    for (let i = n; i <= m; i++) {
+    //分割input n起始、m結尾
+    let tmp = lines[0].split(' ')
+    let start = Number(tmp[0])
+    let end = Number(tmp[1])
+    let arr = 0
+
+
+    for (let i = start; i <= end; i++) {
         i = String(i)
-        tmp.push(i.split(''))
-        // console.log(tmp)
+        arr = i.split('')
 
-
-        let a = 0
-        for (let j = 0; j < tmp.length; j++) {
-            // console.log(Number(tmp[j]))
-            // tmp2 = Number(tmp[j])
-            // console.log(tmp2) //NaN
-            // console.log(tmp.length) //ok
-            tmp[j] = Number(tmp[j])  //NaN
-            a += tmp[j] ** tmp.length
-            console.log(a)
+        let sumArr = 0
+        for (let j = 0; j < arr.length; j++) {
+            sumArr += Number(arr[j]) ** arr.length
         }
 
-        // console.log(tmp)
+        if (sumArr == i) { console.log(sumArr) }
+
     }
-
 }
-
