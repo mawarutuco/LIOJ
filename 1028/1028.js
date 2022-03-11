@@ -25,11 +25,15 @@ function solve(lines) {
         x()
         arr = []
     }
-    sum = String(sum)
-    arr = sum.split('')
-    sum = 0
-    x()
+    while(sum>9){
+        sum = String(sum)
+        arr = sum.split('')
+        sum = 0
+        x()
+    }
+    
     console.log(sum)
+
     
 }
 function x() {
